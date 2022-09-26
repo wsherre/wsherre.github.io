@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+  }
+  .box_container {
+    background: #f0f0f0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .box {
+    border-radius: 20px;
+    width: 60px;
+    height: 60px;
+    background: #f0f0f0;
+    box-shadow:  10px 10px 10px #cccccc,
+                10px 10px 10px #ffffff,
+                0 0 0 #cccccc inset,
+                0 0 0 #ffffff inset;
+    animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s 1;
+    animation-fill-mode: both;
+    /* animation-fill-mode: forwards; */
+  }
+
+  .about_description{
+    animation: fade_in 3s ease-in 1 forwards;
+  }
+
+  .prof_image{
+      margin-top: 100px;
+      width: 80%;
+      height: auto;
+      animation: fade_up 3s 1 forwards;
+  } 
+
+  .word{
+      animation: showup 1s 3s forwards;
+      opacity: 0;
+  }
+  @keyframes showup {
+    0% {
+        opacity:0; 
+        margin-left:0px;
+    }
+    100% {
+        opacity:1;
+        margin-left:50px;
+    }
+}
+@keyframes fade_up {
+    0%{
+        margin-top: 1500px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+    
+}
+@keyframes fade_in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+  /*
+  
+  div:first-of-type {    For increasing performance 
+                         ID/Class should've been used. 
+                         For a small demo 
+                         it's okaish for now 
+    animation: showup 7s infinite;
+  }
+  
+  div:last-of-type {
+    width:0px;
+    animation: reveal 7s infinite;
+  }
+  
+  div:last-of-type span {
+    margin-left:-355px;
+    animation: slidein 7s infinite;
+  }
+  
+  @keyframes showup {
+      0% {opacity:0;}
+      20% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:0;}
+  }
+  
+  @keyframes slidein {
+      0% { margin-left:-800px; }
+      20% { margin-left:-800px; }
+      35% { margin-left:0px; }
+      100% { margin-left:0px; }
+  }
+  
+  @keyframes reveal {
+      0% {opacity:0;width:0px;}
+      20% {opacity:1;width:0px;}
+      30% {width:355px;}
+      80% {opacity:1;}
+      100% {opacity:0;width:355px;}
+  }
+  
+ */
+
+  @keyframes anime {
+    0% {
+      width: 60px;
+      height: 60px;
+      background: #f0f0f0;
+      box-shadow:  10px 10px 10px #cccccc,
+                    10px 10px 10px #ffffff,
+                    0 0 0 #cccccc inset,
+                    0 0 0 #ffffff inset;
+    }
+    25% {
+      width: 60px;
+      height: 60px;
+      background: #f8f8f8;
+      box-shadow:  10px 10px 10px #cccccc,
+                   10px 10px 10px #ffffff,
+                   0 0 0 #cccccc inset,
+                   0 0 0 #ffffff inset;
+    }
+    50% {
+      width: 60px;
+      height: 240px;
+      background: #f8f8f8;
+      box-shadow:  10px 10px 10px #cccccc,
+                   10px 10px 10px #ffffff,
+                   0 0 0 #cccccc inset,
+                   0 0 0 #ffffff inset;
+    }
+    100% {
+      width: 480px;
+      height: 240px;
+      background: #fafafa;
+      box-shadow:  40px 40px 40px #cccccc,
+                   0 0 0 #ffffff,
+                   0 0 0 #cccccc inset,
+                   2px 2px 2px #ffffff inset;
+    }
+}
