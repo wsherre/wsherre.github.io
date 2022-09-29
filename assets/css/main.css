@@ -2,6 +2,9 @@
     margin:0;
     padding:0;
   }
+  :root{
+    --p: 80%;
+  }
   .box_container {
     background: #f0f0f0;
     box-sizing: border-box;
@@ -42,6 +45,16 @@
   }
   .fade{
       animation: fade_up 2s ease-in-out 1s 1 forwards;
+  }
+
+  .progress-slide{
+      width: 0%;
+      animation: slide_over ease-in-out 1 forwards;
+  }
+
+  @keyframes slide_over {
+      from { width: 0%; }
+      to { width: var(--p); }
   }
   @keyframes showup {
     0% {
