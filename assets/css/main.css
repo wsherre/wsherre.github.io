@@ -5,6 +5,9 @@
   :root{
     --p: 80%;
   }
+  body {
+    position: relative;
+  }
   .box_container {
     background: #f0f0f0;
     box-sizing: border-box;
